@@ -26,15 +26,7 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro",
-      "output": "web",
       "config": {
-        "build": {
-          "output": {
-            "web": {
-              "output": "web"
-            }
-          }
-        },
         "metro": {
           "config": {
             "resolver": {

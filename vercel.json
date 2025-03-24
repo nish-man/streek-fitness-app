@@ -6,7 +6,7 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist",
-        "buildCommand": "expo export --platform web",
+        "buildCommand": "npx expo export --platform web",
         "outputDirectory": "dist",
         "env": {
           "EXPO_PUBLIC_APP_NAME": "Streek Fitness App",
