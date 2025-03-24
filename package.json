@@ -2,14 +2,13 @@
   "name": "streek-app",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
-  "web": "./index.web.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "build": "npx expo export:web",
-    "vercel-build": "npx expo export:web"
+    "build": "npx expo export",
+    "vercel-build": "npx expo export"
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.1",
