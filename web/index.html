@@ -32,6 +32,23 @@
         background: #e9ecef;
         border-radius: 4px;
       }
+      /* Loading state */
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .loading-text {
+        font-size: 1.2em;
+        color: #666;
+      }
     </style>
   </head>
   <body>
@@ -42,6 +59,36 @@
         <p>Please enable JavaScript in your browser settings and refresh the page.</p>
       </div>
     </noscript>
+    <!-- Loading state -->
+    <div class="loading">
+      <div class="loading-text">Loading...</div>
+    </div>
+    <!-- Main app script -->
     <script src="/_expo/static/js/web/AppEntry.js" type="module"></script>
+    <!-- Error handling script -->
+    <script>
+      // Add error handling
+      window.onerror = function(msg, url, line, col, error) {
+        const root = document.getElementById('root');
+        if (root) {
+          root.innerHTML = `
+            <div class="error-container">
+              <h2>App Initialization Error</h2>
+              <p>There was an error initializing the app. Please try refreshing the page.</p>
+              <pre>${msg}</pre>
+            </div>
+          `;
+        }
+        return false;
+      };
+
+      // Remove loading state when app is ready
+      window.addEventListener('load', () => {
+        const loading = document.querySelector('.loading');
+        if (loading) {
+          loading.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>

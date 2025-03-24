@@ -14,6 +14,12 @@ try {
         sourceExts: ["js", "jsx", "ts", "tsx", "json", "svg", "png", "jpg", "jpeg", "gif"]
       }
     };
+    
+    // Add error handling
+    window.onerror = function(msg, url, line, col, error) {
+      console.error('Window Error:', msg, url, line, col, error);
+      return false;
+    };
   }
 } catch (error) {
   console.error('Failed to initialize app:', error);
