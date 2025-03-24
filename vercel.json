@@ -15,13 +15,11 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    },
     {
       "source": "/main.bundle.js",
       "destination": "/static/js/main.bundle.js"
