@@ -20,5 +20,11 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/main.bundle.js",
+      "destination": "/static/js/main.bundle.js"
+    }
   ]
 }
