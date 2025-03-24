@@ -15,10 +15,14 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/static/(.*)",
+      "destination": "/_expo/static/$1"
     }
   ],
   "headers": [
@@ -30,12 +34,6 @@
           "value": "public, max-age=0, must-revalidate"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/static/(.*)",
-      "destination": "/_expo/static/$1"
     }
   ]
 }
