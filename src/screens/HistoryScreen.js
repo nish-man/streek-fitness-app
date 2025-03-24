@@ -667,6 +667,6 @@ const styles = StyleSheet.create({
     color: '#FF6B6B',
     fontWeight: '500',
   },
-}
+});
 
 export default HistoryScreen;
