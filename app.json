@@ -26,7 +26,16 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro",
-      "output": "web"
+      "output": "web",
+      "config": {
+        "build": {
+          "output": {
+            "web": {
+              "output": "web"
+            }
+          }
+        }
+      }
     },
     "extra": {
       "eas": {
