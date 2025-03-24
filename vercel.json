@@ -24,5 +24,16 @@
       "source": "/main.bundle.js",
       "destination": "/static/js/main.bundle.js"
     }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
   ]
 }

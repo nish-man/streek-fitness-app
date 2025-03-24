@@ -1,6 +1,7 @@
 {
   "name": "streek-app",
   "version": "1.0.0",
+  "homepage": ".",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -8,7 +9,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build": "expo export --platform web",
-    "vercel-build": "expo export --platform web"
+    "vercel-build": "expo export --platform web",
+    "predeploy": "npm run build",
+    "deploy": "vercel"
   },
   "dependencies": {
     "@expo/metro-runtime": "~4.0.1",

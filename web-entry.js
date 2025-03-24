@@ -15,6 +15,9 @@ if (typeof window !== 'undefined') {
         <div style="text-align: center; padding: 20px;">
           <h2>App Initialization Error</h2>
           <p>There was an error initializing the app. Please try refreshing the page.</p>
+          <pre style="margin-top: 20px; padding: 10px; background: #f5f5f5; border-radius: 4px;">
+            ${error.message}
+          </pre>
         </div>
       `;
     }
